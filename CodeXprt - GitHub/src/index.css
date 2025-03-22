@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-bg: #333434;
+}
+
+.dark {
+  background-color: var(--dark-bg);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.3s ease-out forwards;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+@keyframes userMessageAnimation {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.user-message {
+  animation: userMessageAnimation 0.3s ease-out forwards;
+}
+
+@keyframes botMessageAnimation {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.user-message {
+  animation: userMessageAnimation 0.3s ease-out forwards;
+}
+
+.bot-message {
+  animation: botMessageAnimation 0.3s ease-out forwards;
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-bottom {
+  animation: slideInBottom 0.5s ease-out forwards;
+}
+
+/* Add this to your index.css or a separate CSS file */
+.roadmap-container {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #ddd; /* For Firefox */
+}
+
+.roadmap-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.roadmap-container::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+.roadmap-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+@keyframes borderAnimation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 16, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(52, 211, 16, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 16, 0);
+  }
+}
+
+@keyframes pulseBorder {
+  0% {
+    box-shadow: 0 0 0 0px rgba(52, 211, 16, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(52, 211, 16, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(52, 211, 16, 0.7);
+  }
+}
+
+/* Custom CSS for darker slider arrows in light mode */
+.slick-prev:before,
+.slick-next:before {
+  color: black !important; /* Use a darker color like black */
+}
+
+/* Custom CSS for lighter slider arrows in dark mode */
+.dark .slick-prev:before,
+.dark .slick-next:before {
+  color: white !important; /* Use a lighter color like white */
+}
+
+.input-field {
+  @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow shadow-sm;
+}
